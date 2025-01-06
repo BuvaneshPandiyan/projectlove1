@@ -1,0 +1,123 @@
+/* Header Styles */
+.unique-header {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Updated gradient with love-inspired colors */
+  color: white;
+  text-align: center;
+  padding: 20px; /* Slightly increased padding for better spacing */
+  border-radius: 12px; /* Slightly larger radius for a smoother curve */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a more prominent effect */
+  position: relative;
+  z-index: 1;
+  will-change: transform, opacity; /* Hint for better animation performance */
+}
+
+.unique-header h1 {
+  font-family: 'Dancing Script', cursive; /* Romantic font for the heading */
+  font-size: 32px; /* Larger font size for prominence */
+  margin-bottom: 12px; /* Improved spacing */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Enhanced text shadow */
+  letter-spacing: 1.5px; /* More distinct letter spacing */
+  position: relative;
+}
+
+.unique-header h1::after {
+  content: "I LOVE YOU❤️";
+  position: absolute;
+  bottom: 100%; /* Position the text above the heading */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  white-space: nowrap;
+}
+
+.unique-header h1:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.unique-header nav {
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding-top: 10px;
+  -ms-overflow-style: none;  /* Hide scrollbar in IE */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.unique-header nav::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar in WebKit browsers (Chrome, Safari) */
+}
+
+.unique-header nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px; /* Reduced gap for a more compact navbar */
+  margin: 0;
+}
+
+.unique-header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Decreased font size */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Reduced letter-spacing */
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 4px 8px; /* Reduced padding for a more compact feel */
+  border-radius: 6px; /* Rounded corners for links */
+  touch-action: manipulation; /* Ensure smooth touch response */
+}
+
+.unique-header nav ul li a:hover,
+.unique-header nav ul li a:focus {
+  color: #578996;
+  background-color: white; /* Highlight with a contrasting background */
+}
+
+.unique-header nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #ffffff; /* Subtle underline effect */
+  transition: width 0.3s ease;
+}
+
+.unique-header nav ul li a:hover::after,
+.unique-header nav ul li a:focus::after {
+  width: 100%;
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+  .unique-header {
+    padding: 15px; /* Reduced padding for mobile */
+  }
+
+  .unique-header h1 {
+    font-size: 24px; /* Adjusted font size */
+    margin-bottom: 8px;
+  }
+
+  .unique-header nav ul {
+    gap: 8px; /* Reduced gap for smaller screens */
+  }
+
+  .unique-header nav ul li a {
+    font-size: 14px; /* Adjusted font size for readability */
+    padding: 6px 10px; /* Improved tap area */
+  }
+}
