@@ -34,7 +34,7 @@ function Countdown() {
     const message = "Dai nanum onna love panran";
     const phoneNumber = "7338816479";
     const encodedMessage = encodeURIComponent(message);
-    window.open(https://wa.me/${phoneNumber}?text=${encodedMessage}, "_blank");
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function Countdown() {
       const seconds = Math.floor((difference / 1000) % 60);
 
       setTimeLeft(
-        ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds
+        `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`
       );
     };
 
