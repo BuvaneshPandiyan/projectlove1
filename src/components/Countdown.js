@@ -20,7 +20,7 @@ function Countdown() {
   };
 
   const handlePasswordSubmit = () => {
-    if (password === 'ihavefeelings') {
+    if (password === 'BuviUsha') {
       setIsPasswordCorrect(true);
     } else {
       alert('Incorrect password!');
